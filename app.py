@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 API_BASE = "http://46.250.239.109:6001/api/uids"
-SESSION_COOKIE = ".eJyrVoovSC3KTcxLzStRsiopKk3VUSrKz0lVslIqLU4tUtIBU_GZKUpWRgZGEF5eYi5IPs-gLDE-I7VCqRYAP14XTw.abBAzg.i60OzIoY69rE45w_-d1EMUtAiWA"
+SESSION_COOKIE = ".eJyrVoovSC3KTcxLzStRsiopKk3VUSrKz0lVslIqLU4tUtIBU_GZKUpWRgZGEF5eYi5IPs-gLDE-I7VCqRYAP14XTw.abLcvA.aS4TV5NuZ9L0YixDyu8aXa_3DvA"
 
 @app.route('/')
 def index():
@@ -46,4 +46,5 @@ def claim_free_access():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5051))
+
     app.run(host='0.0.0.0', port=port)
