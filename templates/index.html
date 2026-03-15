@@ -4,244 +4,230 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TANVIR EXE | PREMIUM ACCESS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
-      --primary: #00f2fe;
+      --primary-neon: #00fff2; 
       --secondary: #7000ff;
       --bg-dark: #020205;
-      --card-bg: rgba(10, 10, 18, 0.7);
-      --neon-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+      --card-bg: rgba(15, 15, 20, 0.8);
       --border: rgba(255, 255, 255, 0.1);
-      --text-glow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Rajdhani', sans-serif;
-      background: var(--bg-dark);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .bg-animation {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: radial-gradient(circle at 50% 50%, #0f172a 0%, #020205 100%);
-      z-index: -1;
-    }
-    .bg-animation::before {
-      content: "";
-      position: absolute;
-      width: 200%; height: 200%;
-      background-image: linear-gradient(rgba(0, 242, 254, 0.05) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
-      background-size: 50px 50px;
-      transform: perspective(500px) rotateX(60deg) translateY(-100px);
-      animation: gridMove 10s linear infinite;
-    }
-    @keyframes gridMove {
-      0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
-      100% { transform: perspective(500px) rotateX(60deg) translateY(50px); }
-    }
-    .container {
-      width: 90%;
-      max-width: 440px;
-      padding: 45px;
-      background: var(--card-bg);
-      backdrop-filter: blur(15px);
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      position: relative;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255,255,255,0.02);
-      text-align: center;
-      overflow: hidden;
-    }
-    .container::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 3px;
-      background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
-    }
-    .logo-box {
-      width: 85px; height: 85px;
-      margin: 0 auto 25px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 2px solid var(--primary);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: var(--neon-shadow);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px rgba(0, 242, 254, 0.3); }
-      50% { box-shadow: 0 0 25px rgba(0, 242, 254, 0.6); }
-      100% { box-shadow: 0 0 10px rgba(0, 242, 254, 0.3); }
-    }
-    .logo-box i { font-size: 40px; color: var(--primary); text-shadow: var(--neon-shadow); }
-    .title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 26px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      background: linear-gradient(to right, #fff, var(--primary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .subtitle {
-      color: #94a3b8;
-      font-size: 14px;
-      margin-bottom: 35px;
-      letter-spacing: 1px;
-    }
-    .input-group { text-align: left; margin-bottom: 30px; }
-    .label {
-      font-size: 11px;
-      text-transform: uppercase;
-      color: var(--primary);
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      display: block;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; -webkit-user-select: none; }
+    body { font-family: 'Rajdhani', sans-serif; background-color: var(--bg-dark); color: #fff; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .bg-mesh { position: fixed; inset: 0; z-index: -1; background: radial-gradient(circle at 10% 10%, rgba(0, 255, 242, 0.1) 0%, transparent 50%), radial-gradient(circle at 90% 90%, rgba(0, 114, 255, 0.1) 0%, transparent 50%); filter: blur(60px); }
+    #particles-js { position: fixed; width: 100%; height: 100%; z-index: 0; }
+    .container { width: 95%; max-width: 550px; padding: 50px 40px; background: var(--card-bg); backdrop-filter: blur(20px); border-radius: 30px; border: 1px solid var(--border); position: relative; z-index: 10; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(255,255,255,0.02); text-align: center; display: flex; flex-direction: column; }
+    .container::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, transparent, var(--primary-neon), var(--secondary), transparent); }
+    .logo-box { width: 90px; height: 90px; margin: 0 auto 20px; background: rgba(255, 255, 255, 0.03); border: 2px solid var(--primary-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: pulse 2s infinite; overflow: hidden; }
+    @keyframes pulse { 0% { box-shadow: 0 0 10px rgba(0, 255, 242, 0.3); } 50% { box-shadow: 0 0 25px rgba(0, 255, 242, 0.6); } 100% { box-shadow: 0 0 10px rgba(0, 255, 242, 0.3); } }
+    .logo-box img { width: 100%; height: 100%; object-fit: cover; }
+    .title { font-family: 'Orbitron', sans-serif; font-size: 28px; font-weight: 900; letter-spacing: 3px; margin-bottom: 8px; text-transform: uppercase; background: linear-gradient(to right, #fff, var(--primary-neon)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 35px; letter-spacing: 2px; }
+    .tab-content { display: none; animation: fadeIn 0.4s; min-height: 260px; }
+    .tab-content.active { display: block; }
+    .input-group { text-align: left; margin-bottom: 20px; }
+    .label { font-size: 11px; text-transform: uppercase; color: var(--primary-neon); font-weight: 700; letter-spacing: 1.5px; margin-bottom: 10px; display: block; }
     .input-wrapper { position: relative; }
-    .input {
-      width: 100%;
-      padding: 16px 15px 16px 50px;
-      background: rgba(0, 0, 0, 0.4);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      color: #fff;
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .input:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .input-icon {
-      position: absolute;
-      left: 18px; top: 50%;
-      transform: translateY(-50%);
-      color: var(--primary);
-      font-size: 18px;
-    }
-    .btn {
-      width: 100%;
-      padding: 18px;
-      background: linear-gradient(45deg, var(--secondary), var(--primary));
-      border: none;
-      border-radius: 12px;
-      color: #fff;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      transition: 0.4s;
-      box-shadow: 0 10px 20px rgba(112, 0, 255, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 0; left: -100%; width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: 0.5s;
-    }
-    .btn:hover::before { left: 100%; }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(0, 242, 254, 0.4);
-    }
-    .footer {
-      margin-top: 35px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.4);
-      letter-spacing: 1px;
-    }
-    .footer b { color: var(--primary); }
-    #message {
-      margin-top: 20px;
-      padding: 12px;
-      border-radius: 10px;
-      font-weight: 600;
-      display: none;
-      animation: fadeIn 0.3s;
-    }
+    .input, .select { width: 100%; padding: 18px 15px 18px 55px; background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border); border-radius: 12px; color: #fff; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 600; transition: 0.3s; appearance: none; }
+    .select option { background: #0f0f14; color: #fff; }
+    .input:focus, .select:focus { outline: none; border-color: var(--primary-neon); box-shadow: 0 0 15px rgba(0, 255, 242, 0.2); }
+    .input-icon { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--primary-neon); font-size: 20px; }
+    .btn { width: 100%; padding: 18px; background: linear-gradient(45deg, var(--secondary), var(--primary-neon)); border: none; border-radius: 12px; color: #fff; font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 15px; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.4s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 15px 30px rgba(0, 255, 242, 0.4); }
+    .info-box { background: rgba(0, 0, 0, 0.3); border: 1px solid var(--border); border-radius: 15px; padding: 25px; text-align: left; position: relative; }
+    .info-item { margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px; }
+    .info-label { font-size: 11px; color: var(--primary-neon); text-transform: uppercase; font-weight: 700; }
+    .info-value-row { display: flex; align-items: center; justify-content: space-between; margin-top: 5px; min-height: 25px; }
+    .info-value { font-size: 18px; color: #fff; font-weight: 600; }
+    .pass-toggle, .field-icon { cursor: pointer; color: var(--primary-neon); transition: 0.3s; padding: 5px; }
+    .logout-btn-mini { position: absolute; top: 15px; right: 15px; background: rgba(239, 68, 68, 0.1); border: 1px solid #ef4444; color: #ef4444; width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; }
+    .tabs-bottom { display: flex; justify-content: space-around; background: rgba(0, 0, 0, 0.3); border: 1px solid var(--border); border-radius: 18px; padding: 12px; margin-top: 30px; }
+    .tab-btn { background: none; border: none; color: rgba(255,255,255,0.3); font-size: 24px; cursor: pointer; width: 60px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; }
+    .tab-btn.active { color: var(--primary-neon); background: rgba(0, 255, 242, 0.1); text-shadow: 0 0 15px var(--primary-neon); }
+    .footer { margin-top: 25px; font-size: 12px; color: rgba(255,255,255,0.4); }
+    .footer b { color: var(--primary-neon); }
+    #message { margin-top: 20px; padding: 15px; border-radius: 10px; font-weight: 600; display: none; }
     .success { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid #10b981; }
     .error { background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid #ef4444; }
-    @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
-<body>
-  <div class="bg-animation"></div>
+<body oncontextmenu="return false;">
+
+  <div class="bg-mesh"></div>
+  <div id="particles-js"></div>
+
   <div class="container">
     <div class="logo-box">
-      <i class="fas fa-gamepad"></i>
+      <img src="https://conservative-jade-ehhax2y45k.edgeone.app/Tanvir%20Exe.png" alt="Logo">
     </div>
     <h1 class="title">TANVIR EXE</h1>
-    <p class="subtitle">GET 24H FREE ACCESS INSTANTLY</p>
-    <form id="freeForm">
-      <div class="input-group">
-        <label class="label">User identification (UID)</label>
-        <div class="input-wrapper">
-          <i class="fas fa-microchip input-icon"></i>
-          <input type="text" id="uid" class="input" placeholder="ENTER YOUR UID" required autocomplete="off">
+    <p class="subtitle">PREMIUM SYSTEM ACCESS</p>
+
+    <div id="add-uid" class="tab-content active">
+      <form onsubmit="handleSubmit(event, 'add')">
+        <div class="input-group">
+          <label class="label">User identification (UID)</label>
+          <div class="input-wrapper">
+            <i class="fas fa-microchip input-icon"></i>
+            <input type="text" class="input uid-input" id="add-uid-input" placeholder="ENTER UID (6-15 DIGITS)" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="label">Expiry</label>
+          <div class="input-wrapper">
+            <i class="fas fa-clock input-icon"></i>
+            <select class="select expiry-input" required>
+              <option value="24H">24 HOUR</option>
+              <option value="3D">3 DAY</option>
+              <option value="7D">7 DAY</option>
+              <option value="15D">15 DAY</option>
+              <option value="1M">1 MONTH</option>
+              <option value="6M">6 MONTH</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn">Activate System</button>
+      </form>
+    </div>
+
+    <div id="update-uid" class="tab-content">
+      <form onsubmit="handleSubmit(event, 'update')">
+        <div class="input-group">
+          <label class="label">Select Existing UID</label>
+          <div class="input-wrapper">
+            <i class="fas fa-search input-icon"></i>
+            <select id="uid-select" class="select" style="padding-left: 55px;">
+              <option value="">Choose a UID...</option>
+              <option data-uid="1549297541">1549297541 - (491h remaining)</option>
+              <option data-uid="12602083355">12602083355 - (9h remaining)</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="label">Selected UID</label>
+          <div class="input-wrapper">
+            <i class="fas fa-pen-to-square input-icon"></i>
+            <input type="text" id="update-uid-input" class="input" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="label">Update Duration</label>
+          <div class="input-wrapper">
+            <i class="fas fa-rotate input-icon"></i>
+            <select class="select expiry-input" required>
+              <option value="DELETE">DELETE (PERMANENT)</option>
+              <option value="24H">24 HOUR</option>
+              <option value="3D">3 DAY</option>
+              <option value="7D">7 DAY</option>
+              <option value="1M">1 MONTH</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn">Update System</button>
+      </form>
+    </div>
+
+    <div id="info" class="tab-content">
+      <div class="info-box">
+        <button class="logout-btn-mini" onclick="window.location.href='/logout'"><i class="fas fa-sign-out-alt"></i></button>
+        <div class="info-item">
+          <span class="info-label">Username</span>
+          <div class="info-value-row">
+            <span class="info-value" id="display-user">LOADING...</span>
+            <i class="fas fa-user-circle field-icon"></i>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Password</span>
+          <div class="info-value-row">
+            <span class="info-value" id="pass-field">••••••••</span>
+            <i class="fas fa-eye pass-toggle" onclick="togglePass()"></i>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-label">IP Address</span>
+          <div class="info-value-row">
+            <span class="info-value" id="display-ip">FETCHING...</span>
+            <i class="fas fa-network-wired field-icon"></i>
+          </div>
         </div>
       </div>
-      <button type="submit" class="btn" id="submitBtn">
-        Activate System
-      </button>
-    </form>
-    <div id="message"></div>
-    <div class="footer">
-      Developed by <b>TANVIR</b> | UID System v2.0
     </div>
+
+    <div id="message"></div>
+    <div class="tabs-bottom">
+      <button class="tab-btn active" onclick="openTab('add-uid')"><i class="fas fa-plus-square"></i></button>
+      <button class="tab-btn" onclick="openTab('update-uid')"><i class="fas fa-edit"></i></button>
+      <button class="tab-btn" onclick="openTab('info')"><i class="fas fa-user-shield"></i></button>
+    </div>
+    <div class="footer">Developed by <b>TANVIR</b> | UID System v2.0</div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    document.getElementById('freeForm').addEventListener('submit', function(e) {
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 40, density: { enable: true, value_area: 800 } },
+        color: { value: '#00fff2' },
+        opacity: { value: 0.3 },
+        size: { value: 1.5 },
+        line_linked: { enable: true, distance: 120, color: '#00fff2', opacity: 0.1 },
+        move: { enable: true, speed: 0.6 }
+      },
+      retina_detect: true
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('/api/user_info').then(res => res.json()).then(data => {
+            document.getElementById('display-user').innerText = data.username;
+            window.storedPass = data.password;
+        });
+        fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => {
+            document.getElementById('display-ip').innerText = data.ip;
+        }).catch(() => { document.getElementById('display-ip').innerText = "127.0.0.1"; });
+    });
+
+    document.getElementById('uid-select').addEventListener('change', function() {
+        const uid = this.options[this.selectedIndex].getAttribute('data-uid');
+        if (uid) document.getElementById('update-uid-input').value = uid;
+    });
+
+    let passVisible = false;
+    function togglePass() {
+      const field = document.getElementById('pass-field');
+      passVisible = !passVisible;
+      field.innerText = passVisible ? window.storedPass : '••••••••';
+      event.target.className = passVisible ? 'fas fa-eye-slash pass-toggle' : 'fas fa-eye pass-toggle';
+    }
+
+    function openTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+      document.getElementById('message').style.display = 'none';
+    }
+
+    function handleSubmit(e, type) {
       e.preventDefault();
-      const uid = document.getElementById('uid').value;
-      const btn = document.getElementById('submitBtn');
+      const form = e.target;
+      const uid = (type === 'add') ? document.getElementById('add-uid-input').value : document.getElementById('update-uid-input').value;
+      const duration = form.querySelector('.expiry-input').value;
       const msg = document.getElementById('message');
-      btn.disabled = true;
-      btn.innerText = 'AUTHENTICATING...';
-      fetch('/claim_free_access', {
+      msg.style.display = 'block'; msg.innerText = 'PROCESSING...'; msg.className = 'success';
+
+      fetch('/api/manage', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: 'uid=' + encodeURIComponent(uid)
-      })
-      .then(r => r.json())
-      .then(data => {
-        msg.style.display = 'block';
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uid, duration, type })
+      }).then(res => res.json()).then(data => {
         msg.innerText = data.message;
         msg.className = data.success ? 'success' : 'error';
-        if (data.success) {
-          document.getElementById('uid').value = '';
-        }
-      })
-      .catch(err => {
-        msg.style.display = 'block';
-        msg.innerText = 'SYSTEM ERROR. TRY AGAIN.';
-        msg.className = 'error';
-      })
-      .finally(() => {
-        btn.disabled = false;
-        btn.innerText = 'Activate System';
       });
-    });
+    }
   </script>
 </body>
 </html>
